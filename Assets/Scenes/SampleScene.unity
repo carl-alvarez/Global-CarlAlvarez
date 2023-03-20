@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3461423918425162586, guid: 3807b3ff225284d46835068d73d9cd2a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3461423918425162586, guid: 3807b3ff225284d46835068d73d9cd2a, type: 3}
       propertyPath: m_TagString
@@ -3961,20 +3961,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.79, z: 1}
   m_Center: {x: 0, y: 1.93, z: 0}
---- !u!114 &938885242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938885240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f4e1b07dc6a1624ba1f911d6985d595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posJugador: {fileID: 2134524779}
-  speed: 8
 --- !u!54 &938885243
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4630,6 +4616,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posJugador: {fileID: 2134524779}
   speed: 8
+  range: 100
+  miradaenemigo: {fileID: 1049113550}
+  damage: 10
+  dmgPomberito: 5
 --- !u!54 &1049113553
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6403,7 +6393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1467189161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8290,7 +8280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3461423918425162586, guid: 3807b3ff225284d46835068d73d9cd2a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3461423918425162586, guid: 3807b3ff225284d46835068d73d9cd2a, type: 3}
       propertyPath: m_TagString
@@ -8304,6 +8294,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3461423918424940410, guid: 3807b3ff225284d46835068d73d9cd2a, type: 3}
   m_PrefabInstance: {fileID: 1873986708}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1873986710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938885240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b0e252da3065b41bc6c8b5b3d93f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posJugador: {fileID: 2134524779}
+  speed: 1
+  range: 100
+  miradaenemigo: {fileID: 938885240}
+  damage: 10
+  maxDist: 2
+  dmgLobizon: 7
 --- !u!1 &1888552321
 GameObject:
   m_ObjectHideFlags: 0
@@ -9354,7 +9363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 815958260657501821, guid: 10b593d21bce3f949882b9bf8f821895, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 815958260657859165, guid: 10b593d21bce3f949882b9bf8f821895, type: 3}
       propertyPath: m_RootOrder
@@ -9399,6 +9408,10 @@ PrefabInstance:
     - target: {fileID: 815958260657859165, guid: 10b593d21bce3f949882b9bf8f821895, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277204692662973181, guid: 10b593d21bce3f949882b9bf8f821895, type: 3}
+      propertyPath: damage
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4277204692662973181, guid: 10b593d21bce3f949882b9bf8f821895, type: 3}
       propertyPath: posJugador

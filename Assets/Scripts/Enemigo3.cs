@@ -1,34 +1,25 @@
 using UnityEngine;
 
-public class Enemigo3 : MonoBehaviour
+public class Enemigo3 : Enemigo1
 {
 
-    public Transform posJugador;
-    public float speed = 1f;
+    public float dmgPomberito;
 
     void Start()
     {
-        
+        posJugador = GameObject.FindWithTag("Player").transform;
     }
     void Update()
     {
         FollowP1();
         LookAtPl();
         checkDist();
+        DondeEsta();
     }
-    void checkDist()
+
+    public override void BasicAttack()
     {
-        float dist = Vector3.Distance(posJugador.position, transform.position);
-    }
-    void LookAtPl()
-    {
-        Quaternion lookOnLook = Quaternion.LookRotation(posJugador.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime);
-    }
-    void FollowP1()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, posJugador.position, speed * Time.deltaTime);
-        //transform.position = Vector3.MoveTowards(transform.position , posJugador.position, Time.deltaTime);
+        Debug.Log("Recibes " + dmgPomberito + " de daño Pomberito");
     }
 
 }

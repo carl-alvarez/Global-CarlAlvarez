@@ -27,7 +27,7 @@ public class PJ1 : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             if (hit.transform.tag == "enemigo")
             {
                 Debug.Log("Has visto un Zombie");

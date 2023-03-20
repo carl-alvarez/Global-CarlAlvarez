@@ -5,6 +5,7 @@ using UnityEngine;
 public class TdaTest : MonoBehaviour
 {
     public GameObject prefab;
+    
     public Transform[] puntoSpawn;
 
     public List<string> zombies = new List<string>();
@@ -42,12 +43,12 @@ public class TdaTest : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < zombies.Count; i++)
-        {
-            if (zombies[i].Length >= 6)
-            {
-                Debug.Log("El " + zombies[i] + " contiene 6 letras o más");
-            }
-        }
+        //for (int i = 0; i < zombies.Count; i++)
+        //{
+        //    if (zombies[i].Length >= 6)
+        //    {
+        //        Debug.Log("El " + zombies[i] + " contiene 6 letras o más");
+        //    }
+        //}
     }
 }
